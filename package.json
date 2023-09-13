@@ -25,7 +25,7 @@
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxtjs/html-validator": "^1.5.2",
     "@pinegrow/nuxt-module": "^3.0.18",
-    "@pinegrow/vuetify-plugin": "^3.0.23",
+    "@pinegrow/vuetify-plugin": "^3.0.24",
     "@types/node": "^20.5.0",
     "@unocss/nuxt": "^0.54.1",
     "@unocss/preset-icons": "^0.54.1",
