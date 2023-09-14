@@ -25,7 +25,17 @@ Clean code 😃, No lock-in - You are in control of your projects and developmen
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx giget@latest gh:pinegrow/pg-nuxtvuetify my-nuxt-vuetify-app #project-name
+npx giget@latest gh:pinegrow/pg-nuxt-vuetify my-nuxt-vuetify-app #project-name
+cd my-nuxt-vuetify-app
+npm install #or use pnpm
+```
+
+(or)
+
+If you prefer a blank template (a single empty home page) instead,
+
+```bash
+npx giget@latest gh:pinegrow/pg-nuxt-vuetify#blank my-nuxt-vuetify-app #project-name
 cd my-nuxt-vuetify-app
 npm install #or use pnpm
 ```
@@ -91,6 +101,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ### Devtools
 
 - [Nuxt Devtools](https://devtools.nuxtjs.org) - Enhance your DX (developer experience) with an amazing set of in-app features.
+  - **ACTION REQUIRED**: Currently deactivated. In `nuxt.config.ts`, uncomment module to activate.
 - [Vue Devtools](https://devtools.vuejs.org/guide/installation.html#standalone) - Official devtools that can be used as a standalone app alongside Vue Designer. It's configured as a Nuxt plugin (only during development).
   - **ACTION REQUIRED**: Currently deactivated. In `plugins/devtools.client.ts`, uncomment to activate.
 
