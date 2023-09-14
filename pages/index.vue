@@ -9,8 +9,6 @@
   })
 </script>
 <template>
-  <main>
-    <SampleCard />
-  </main>
+  <main>A Fresh Start!</main>
 </template>
 <style scoped></style>
