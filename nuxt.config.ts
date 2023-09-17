@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       vuetify: {
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
         configPath: 'vuetify.config.ts', // or file where vuetify is created
-        cssPath: '@/assets/css/main.css',
+        // cssPath: '@/assets/css/main.css',
         // utilities: false,
         restartOnThemeUpdate: true,
       },
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
 
   // Vuetify's global styles
   css: [
-    '~/assets/css/main.css', // Used for global styles. This file is generally configured as cssPath with Pinegrow Vuetify Plugin
+    '~/assets/css/main.css', // Used for global styles.
     '~/assets/vuetify/main.scss', // If customizing Vuetify sass variables
   ],
 
