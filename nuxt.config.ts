@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'vuetify-nuxt-module',
     '@nuxtjs/html-validator',
+    '@nuxt/image',
   ],
   pinegrow: {
     liveDesigner: {
@@ -73,6 +74,23 @@ export default defineNuxtConfig({
   // Required when customizing Vuetify sass variables via configFile with SSR enabled - https://vuetify-nuxt-module.netlify.app/guide/server-side-rendering.html#vuetify-sass-variables
   experimental: {
     inlineSSRStyles: false,
+  },
+
+  image: {
+    domains: ['images.unsplash.com'],
+    alias: {
+      unsplash: 'https://images.unsplash.com',
+    },
+    // The screen sizes predefined by `@nuxt/image`:
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536,
+    },
   },
 
   content: {

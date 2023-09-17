@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  // import { pg_background_urls } from '~~/themes/pg-tailwindcss/tokens.mjs'
+
   import { ref } from 'vue'
   const loading = ref(false)
   const selection = ref(1)
@@ -8,6 +10,25 @@
 
     setTimeout(() => (loading.value = false), 2000)
   }
+
+  // const heroImageSrc =
+  //   pg_background_urls['design-image-large'] ||
+  //   pg_background_urls['design-image']
+
+  const heroImageSrc =
+    'https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDEzfHxiYWtlcnklMjBjb2ZmZWV8ZW58MHx8fHwxNjkzNTcxNzY4fDA&ixlib=rb-4.0.3&q=85'
+
+  const img = useImage()
+  const _srcset = computed(() => {
+    return img.getSizes(heroImageSrc, {
+      sizes: 'xs:100vw sm:100vw md:100vw lg:100vw xl:100vw',
+      modifiers: {
+        format: 'webp',
+        quality: 70,
+        height: 800,
+      },
+    })
+  })
 </script>
 <template>
   <v-card
@@ -24,10 +45,13 @@
       ></v-progress-linear>
     </template>
     <v-img
-      cover
+      :lazy-src="img(heroImageSrc, { width: 10, quality: 70 })"
+      :src="img(heroImageSrc, { height: 800, quality: 70 })"
+      :srcset="_srcset.srcset"
+      :sizes="_srcset.sizes"
       height="250"
-      src="https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDEzfHxiYWtlcnklMjBjb2ZmZWV8ZW58MHx8fHwxNjkzNTcxNzY4fDA&ixlib=rb-4.0.3&q=85"
-    ></v-img>
+      cover
+    />
     <v-card-item>
       <v-card-title class="text-primary">Cafe Badilico</v-card-title>
       <v-card-subtitle>
