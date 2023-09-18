@@ -36,8 +36,8 @@ export default defineNuxtConfig({
       vuetify: {
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
         configPath: 'vuetify.config.ts', // or file where vuetify is created
-        // cssPath: '@/assets/css/main.css',
         // utilities: false,
+        // restartOnConfigUpdate: true,
         restartOnThemeUpdate: true,
       },
       // plugins: [
@@ -65,6 +65,7 @@ export default defineNuxtConfig({
       styles: {
         configFile: 'assets/vuetify/settings.scss',
       },
+      includeTransformAssetsUrls: true,
       //...
     },
 
