@@ -76,7 +76,7 @@
         @click="showStatus(true)"
       ></v-btn>
       <v-snackbar v-model="statusDisplay" timeout="2000">
-        <span class="text-info w-100"
+        <span class="text-white w-100"
           >{{ availableTimeSlots[selectedTimeSlot] }} was reserved.</span
         >
       </v-snackbar>
