@@ -62,9 +62,9 @@ export default defineNuxtConfig({
   vuetify: {
     moduleOptions: {
       /* If customizing sass variables of vuetify components */
-      styles: {
-        configFile: 'assets/vuetify/settings.scss',
-      },
+      // styles: {
+      //   configFile: 'assets/vuetify/settings.scss',
+      // },
       includeTransformAssetsUrls: true,
       //...
     },
