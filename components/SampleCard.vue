@@ -72,7 +72,6 @@
         text="Reserve"
         variant="tonal"
         class="mb-2 ml-2"
-        size="large"
         @click="showStatus(true)"
       ></v-btn>
       <v-snackbar v-model="statusDisplay" timeout="2000">
