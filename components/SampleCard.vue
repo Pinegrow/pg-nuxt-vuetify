@@ -11,7 +11,7 @@
   }
 </script>
 <template>
-  <v-card width="360" class="elevation-4 mt-12 mx-auto">
+  <v-card width="360" class="mt-12 mx-auto" elevation="4">
     <v-img
       :src="heroSrc"
       height="250"
@@ -22,7 +22,10 @@
     ></v-img>
     <v-card-item>
       <template #title>
-        <span class="text-primary">Cafe Bella Vista</span>
+        <div class="d-flex justify-space-between">
+          <span class="text-primary">Cafe Bella Vista</span>
+          <DarkModeSwitch />
+        </div>
       </template>
       <template #subtitle>
         <span>Local Favourite</span>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  // import checkDarkTheme from '@/composables/dark-color-scheme-check?raw'
-  // import type { Script } from '@unhead/schema'
-  // type TurboScript = Script & { once: true }
+  import checkDarkTheme from '@/composables/dark-color-scheme-check?raw'
+  import type { Script } from '@unhead/schema'
+  type TurboScript = Script & { once: true }
 
   import { pg_font_urls } from '~~/themes/pg-vuetify/tokens.mjs'
 
@@ -9,7 +9,7 @@
     {
       rel: 'icon',
       type: 'image/x-icon',
-      href: '/favicon.svg',
+      href: '/favicon.ico',
     },
   ]
   const noscript: any = []
@@ -57,7 +57,7 @@
       { property: 'keywords', content: route.meta.tags?.toString() },
       { property: 'author', content: 'Pinegrow' },
     ],
-    // script: [{ innerHTML: checkDarkTheme, once: true } as TurboScript],
+    script: [{ innerHTML: checkDarkTheme, once: true } as TurboScript],
     link,
     noscript,
   })
