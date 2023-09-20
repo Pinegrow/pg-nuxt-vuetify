@@ -1,6 +1,6 @@
 import { useDark, useToggle } from '@vueuse/core'
 
-export function useCustomTheme() {
+export const useCustomTheme = () => {
   const { $vuetify } = useNuxtApp()
 
   const isDark = useDark({

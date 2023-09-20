@@ -1,10 +1,19 @@
+<script setup lang="ts">
+  /* Vuetify useTheme will not work with SSR enabled, more info - https://vuetify-nuxt-module.netlify.app/guide/server-side-rendering.html#vuetify-themes */
+  // import { useCustomTheme } from '~/composables/custom-theme'
+  // const { isDark } = useCustomTheme()
+
+  /* Update on using the above technique - We now use SSR HTTP Client hints technique instead of the above - https://vuetify-nuxt-module.netlify.app/guide/server-side-rendering.html#ssr-http-client-hints */
+</script>
+
 <template>
   <v-app>
+    <!-- <v-app :theme="isDark ? 'dark' : 'light'"> -->
     <v-main>
       <div>
         <MetaTags />
         <div class="d-flex flex-column bg-background text-on-background">
-          <!-- <NavBar class="position-fixed bg-background shadow" style="z-index: 10;" /> -->
+          <!-- <NavBar class="position-fixed bg-background shadow" style="z-index: 20;" /> -->
           <!-- <div class="mt-24 shadow"> -->
           <slot />
           <!-- </div> -->

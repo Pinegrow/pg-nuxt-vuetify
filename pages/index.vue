@@ -1,4 +1,7 @@
 <script setup lang="ts">
+  import { useHero } from '@/composables/hero'
+  const { heroImage, heroLazySrc, heroSrc } = useHero()
+
   definePageMeta({
     title: 'Home',
     navOrder: 1,
