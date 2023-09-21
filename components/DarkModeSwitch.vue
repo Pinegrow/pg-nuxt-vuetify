@@ -1,8 +1,30 @@
 <script setup lang="ts">
-  // import { isDark, toggleDark } from '@/composables/custom-theme'
-  // import { useTheme } from 'vuetify'
+  // import { ssrClientHintsConfiguration } from 'virtual:vuetify-ssr-client-hints-configuration'
 
-  const { isDark, toggleDark } = useCustomTheme()
+  import { isDark, toggleDark } from '@/composables/dark'
+  import { useTheme } from 'vuetify'
+
+  // const ssrClientHints = useNuxtApp().$ssrClientHints
+  // const { width, height, md } = useDisplay()
+  const theme = useTheme()
+
+  // const enableToogleTheme = computed(() => {
+  //   if (
+  //     ssrClientHintsConfiguration.prefersColorScheme &&
+  //     ssrClientHintsConfiguration.prefersColorSchemeOptions
+  //   )
+  //     return !ssrClientHintsConfiguration.prefersColorSchemeOptions
+  //       .useBrowserThemeOnly
+  //   return false
+  // })
+
+  // const vuetify = useNuxtApp().$vuetify
+
+  const toggleTheme = () => {
+    toggleDark()
+    theme.global.name.value = isDark.value ? 'dark' : 'light'
+    // vuetify.theme.global.name.value = isDark.value ? 'dark' : 'light'
+  }
 </script>
 <template>
   <div class="mx-3">
@@ -10,7 +32,7 @@
       variant="tonal"
       class="!rounded-lg"
       aria-label="Toggle theme"
-      @click="toggleDark()"
+      @click="toggleTheme"
     >
       <transition name="slide" mode="out-in">
         <v-icon
