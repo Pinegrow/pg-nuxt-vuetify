@@ -2,7 +2,7 @@ export default {
   title: `Vue Designer`,
   description: 'Vue Designer Nuxt Vuetify - Quick start template',
   author: 'Pinegrow',
-  url: 'https://pg-nuxt-tailwindcss.netlify.app/',
+  url: 'https://pg-nuxt-vuetify.netlify.app',
   nav: [
     { text: 'Home', link: '/' },
     { text: `Store`, link: '/store' },
