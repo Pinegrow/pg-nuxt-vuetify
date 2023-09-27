@@ -17,15 +17,17 @@
     statusDisplay.value = status
   }
 </script>
+
 <template>
   <v-card width="360" class="mt-12 mx-auto" elevation="4">
-    <v-img
+    <!-- <v-img
       :src="heroImageOptimized.imageSrc"
       :srcset="heroImageOptimized.imageSizes.srcset"
       :sizes="heroImageOptimized.imageSizes.sizes"
       height="250"
       cover
-    ></v-img>
+    ></v-img> -->
+    <v-img :src="heroImageUrl" height="250" cover></v-img>
     <v-card-item>
       <template #title>
         <div class="d-flex justify-space-between">
