@@ -57,19 +57,31 @@ export default defineNuxtConfig({
     'lite-youtube-embed/src/lite-yt-embed.css',
   ],
 
+  vite: {
+    vue: {
+      template: {
+        transformAssetUrls: {
+          'v-carousel': ['src', ':src'],
+          'v-carousel-item': ['src', ':src'],
+          'v-parallax': ['src', ':src'],
+        },
+      },
+    },
+  },
+
   // Vuetify Nuxt module, thanks Joaquín (userquin)
   vuetify: {
     moduleOptions: {
       /* If customizing sass variables of vuetify components */
-      // styles: {
-      //   configFile: 'assets/vuetify/settings.scss',
-      // },
-      includeTransformAssetsUrls: true,
+      styles: {
+        configFile: 'assets/vuetify/settings.scss',
+      },
+      includeTransformAssetsUrls: true, // default
       ssrClientHints: {
-        reloadOnFirstRequest: false,
+        reloadOnFirstRequest: false, // default
         prefersColorScheme: true,
         prefersColorSchemeOptions: {
-          useBrowserThemeOnly: false,
+          useBrowserThemeOnly: false, // default
         },
         viewportSize: true,
       },
@@ -80,9 +92,9 @@ export default defineNuxtConfig({
   },
 
   // Required when customizing Vuetify sass variables via configFile with SSR enabled - https://vuetify-nuxt-module.netlify.app/guide/server-side-rendering.html#vuetify-sass-variables
-  // experimental: {
-  //   inlineSSRStyles: false,
-  // },
+  experimental: {
+    inlineSSRStyles: false,
+  },
 
   image: {
     // sizes: 'xs:100vw sm:100vw md:100vw lg:100vw xl:100vw', // Not yet supported - https://github.com/nuxt/image/issues/216

@@ -17,7 +17,6 @@
     statusDisplay.value = status
   }
 </script>
-
 <template>
   <v-card width="360" class="mt-12 mx-auto" elevation="4">
     <!-- <v-img
@@ -79,12 +78,7 @@
       </v-chip-group>
     </v-card-item>
     <v-card-actions>
-      <v-btn
-        text="Reserve"
-        variant="tonal"
-        class="mb-2 ml-2"
-        @click="showStatus(true)"
-      ></v-btn>
+      <v-btn text="Reserve" class="mb-2 ml-2" @click="showStatus(true)"></v-btn>
       <v-snackbar v-model="statusDisplay" timeout="2000"
         ><span class="text-white w-100"
           >{{ availableTimeSlots[selectedTimeSlot] }} was reserved.</span
