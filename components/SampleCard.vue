@@ -1,13 +1,27 @@
 <script setup lang="ts">
-  import { pg_background_urls } from '~~/themes/pg-vuetify/tokens.mjs'
+  import { heroImageUrl } from '@/utils/hero'
 
-  const { optimizeImage, optimizeImages } = useOptimizeImage()
+  const { optimizeImage } = useOptimizeImage()
+  const heroImageOptimized = {
+    alt: `hero`,
+    cover: true,
+    ...optimizeImage(
+      heroImageUrl,
+      /* options */
+      {
+        /* If using local images instead of unsplash url, enable netlify provider */
+        // provider:
+        //     process.env.NODE_ENV === 'production'
+        //       ? 'netlify'
+        //       : null /* defaults to ipx or ipxStatic */,
+        placeholder: false, // placeholder image before the actual image is fully loaded.
+      },
+      true /* return bgStyles */,
+    ),
+  }
 
-  const heroImageUrl =
-    pg_background_urls['design-image-large'] ||
-    pg_background_urls['design-image']
-
-  const heroImageOptimized = optimizeImage(heroImageUrl)
+  const heroImage = heroImageOptimized.src
+  const bgStyles = heroImageOptimized.bgStyles
 
   const availableTimeSlots = ['3.30PM', '4.20PM', '5.50PM', '6.00PM']
   const selectedTimeSlot = ref(0)
@@ -19,14 +33,14 @@
 </script>
 <template>
   <v-card width="360" class="mt-12 mx-auto" elevation="4">
-    <!-- <v-img
-      :src="heroImageOptimized.imageSrc"
-      :srcset="heroImageOptimized.imageSizes.srcset"
-      :sizes="heroImageOptimized.imageSizes.sizes"
+    <v-img
+      :src="heroImageOptimized.src"
+      :srcset="heroImageOptimized.srcset"
+      :sizes="heroImageOptimized.sizes"
       height="250"
       cover
-    ></v-img> -->
-    <v-img :src="heroImageUrl" height="250" cover></v-img>
+    />
+    <!-- <v-img :src="heroImage" height="250" cover/> -->
     <v-card-item>
       <template #title>
         <div class="d-flex justify-space-between">

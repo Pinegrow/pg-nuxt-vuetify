@@ -7,20 +7,22 @@
 </script>
 
 <template>
-  <v-app>
+  <!-- <div class="container mx-auto"> -->
+  <v-app
+    class="bg-background text-on-background"
+    style="min-height: 100vh !important"
+  >
     <!-- <v-app :theme="isDark ? 'dark' : 'light'"> -->
-    <v-main>
-      <div>
-        <MetaTags />
-        <div class="d-flex flex-column bg-background text-on-background">
-          <!-- <NavBar class="position-fixed bg-background shadow" style="z-index: 20;" /> -->
-          <!-- <div class="mt-24 shadow"> -->
-          <slot />
-          <!-- </div> -->
-          <!-- <TheFooter /> -->
-        </div>
-      </div>
+    <!-- https://vuetifyjs.com/en/features/application-layout/
+        Navbar contains all nav components such as v-app-bar, v-system-bar, v-navigation-drawer, v-bottom-navigation -->
+    <!-- <NavBar /> -->
+    <v-main class="py-4">
+      <slot />
     </v-main>
+    <!-- https://vuetifyjs.com/en/features/application-layout/
+        TheFooter contains the v-footer -->
+    <!-- <TheFooter /> -->
   </v-app>
+  <!-- </div> -->
 </template>
 <style></style>
