@@ -35,6 +35,6 @@
   const bgStyles = heroImageOptimized.bgStyles
 </script>
 <template>
-  <main><span>A Fresh Start!</span></main>
+  <div><span>A Fresh Start!</span><DarkModeSwitch /></div>
 </template>
 <style scoped></style>
