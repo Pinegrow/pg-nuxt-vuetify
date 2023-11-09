@@ -40,7 +40,7 @@
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/html-validator": "^1.5.2",
     "@nuxtseo/module": "^2.0.0-beta.39",
-    "@pinegrow/nuxt-module": "^3.0.24",
+    "@pinegrow/nuxt-module": "^3.0.29",
     "@pinegrow/vuetify-plugin": "^3.0.45",
     "@types/node": "^20.5.0",
     "@unocss/nuxt": "^0.54.1",
