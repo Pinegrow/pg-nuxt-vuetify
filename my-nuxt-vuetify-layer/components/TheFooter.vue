@@ -40,4 +40,66 @@
     </div>
   </v-footer>
 </template>
-<style scoped></style>
+<style scoped>
+  .pb-24 {
+    padding-bottom: 6rem /* 96px */;
+  }
+  .pt-12 {
+    padding-top: 3rem /* 48px */;
+  }
+
+  .container {
+    width: 100%;
+  }
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px;
+    }
+  }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .px-8 {
+    padding-left: 2rem /* 32px */;
+    padding-right: 2rem /* 32px */;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem /* 32px */ * var(--tw-space-x-reverse));
+    margin-left: calc(2rem /* 32px */ * calc(1 - var(--tw-space-x-reverse)));
+  }
+  .text-2xl {
+    font-size: 1.5rem /* 24px */;
+    line-height: 2rem /* 32px */;
+  }
+</style>
