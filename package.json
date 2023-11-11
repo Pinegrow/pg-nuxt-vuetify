@@ -28,7 +28,7 @@
     "lite-youtube-embed": "^0.2.0",
     "pinia": "^2.1.6",
     "sass": "^1.64.2",
-    "vuetify": "^3.3.11"
+    "vuetify": "^3.4.0"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.96",
@@ -57,7 +57,7 @@
     "prettier": "^2.8.4",
     "rehype-external-links": "^3.0.0",
     "typescript": "^5.0.4",
-    "vuetify-nuxt-module": "^0.6.0"
+    "vuetify-nuxt-module": "^0.6.6"
   },
   "pnpm": {
     "overrides": {
