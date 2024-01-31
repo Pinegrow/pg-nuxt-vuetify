@@ -270,7 +270,7 @@ export default defineNuxtConfig({
   pinegrow: {
     liveDesigner: {
       iconPreferredCase: 'unocss', // default value (can be removed), vuetify-nuxt-module uses the unocss format for icon names
-      devtoolsKey: 'devtools', // see plugins/devtools.client.ts
+      devtoolsKey: 'devtoolsKey', // see plugins/devtools.client.ts
       vuetify: {
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
         configPath: 'vuetify.config.ts', // or file where vuetify is created
