@@ -42,7 +42,7 @@
     "@nuxtjs/html-validator": "^1.5.2",
     "@nuxtseo/module": "^2.0.0-beta.39",
     "@pinegrow/nuxt-module": "^3.0.34",
-    "@pinegrow/vuetify-plugin": "^3.0.45",
+    "@pinegrow/vuetify-plugin": "^3.0.46",
     "@types/node": "^20.5.0",
     "@unocss/nuxt": "^0.54.1",
     "@unocss/preset-icons": "^0.54.1",
