@@ -1,4 +1,4 @@
-import { pg_font_urls } from '../themes/pg-vuetify/tokens.mjs'
+import { pg_font_urls } from '../../themes/pg-vuetify/tokens.mjs'
 
 const getFontsWithFallback = (pg_fonts) => {
   const pg_fonts_with_fallback = { ...pg_fonts }
