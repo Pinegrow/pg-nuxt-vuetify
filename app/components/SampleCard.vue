@@ -54,7 +54,7 @@
           icon="i-ic-round-local-fire-department"
           class="bg-red-darken-4 ml-2 text-red-darken-2"
           size="small"
-        ></v-icon>
+        />
       </template>
       <div class="align-center d-flex">
         <v-rating
@@ -63,8 +63,7 @@
           color="amber-darken-2"
           model-value="4.5"
           half-increments
-        ></v-rating
-        ><span class="ml-2 mt-2 text-caption text-medium-emphasis"
+        /><span class="ml-2 mt-2 text-caption text-medium-emphasis"
           >4.5 (413)</span
         >
       </div>
@@ -79,7 +78,7 @@
           indoor seats plus patio seating.</span
         >
       </div>
-      <v-divider class="mt-4"></v-divider>
+      <v-divider class="mt-4" />
     </v-card-text>
     <v-card-item>
       <template #title><span>Tonight's availability</span> </template>
@@ -88,11 +87,11 @@
           v-for="(timeSlot, index) in availableTimeSlots"
           :key="index"
           :text="timeSlot"
-        ></v-chip>
+        />
       </v-chip-group>
     </v-card-item>
     <v-card-actions>
-      <v-btn text="Reserve" class="mb-2 ml-2" @click="showStatus(true)"></v-btn>
+      <v-btn text="Reserve" class="mb-2 ml-2" @click="showStatus(true)" />
       <v-snackbar v-model="statusDisplay" timeout="2000"
         ><span class="text-white w-100"
           >{{ availableTimeSlots[selectedTimeSlot] }} was reserved.</span
