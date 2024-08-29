@@ -35,10 +35,12 @@ export default defineNuxtConfig({
   //   modules: fileURLToPath(new URL('modules', import.meta.url)),
   // },
 
-  experimental: {
+  features: {
     // Required when customizing Vuetify sass variables via configFile with SSR enabled - https://vuetify-nuxt-module.netlify.app/guide/server-side-rendering.html#vuetify-sass-variables
-    //   inlineSSRStyles: false,
+    inlineStyles: false,
+  },
 
+  experimental: {
     componentIslands: true,
   },
 
@@ -92,14 +94,12 @@ export default defineNuxtConfig({
     moduleOptions: {
       /* If customizing sass variables of vuetify components */
       /* If enabling this, set experimental.inlineSSRStyles to false */
-      // styles: {
-      //   configFile: 'assets/vuetify/settings.scss',
-      // },
+      styles: {
+        configFile: 'assets/vuetify/settings.scss',
+      },
       includeTransformAssetsUrls: {
         NuxtImg: ['src'],
         OgImage: ['image'],
-        'v-carousel-item': ['src', 'lazySrc', 'srcset'],
-        'v-card': ['image', 'prependAvatar', 'appendAvatar'],
       },
 
       ssrClientHints: {
