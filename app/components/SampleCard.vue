@@ -77,13 +77,14 @@
     </v-card-text>
     <v-card-item>
       <template #title><span>Tonight's availability</span> </template>
-      <v-chip-group v-model="selectedTimeSlot" class="mt-2">
-        <v-chip
-          v-for="(timeSlot, index) in availableTimeSlots"
-          :key="index"
-          :text="timeSlot"
-        />
-      </v-chip-group>
+      <!-- <v-chip-group v-model="selectedTimeSlot" class="mt-2"> -->
+      <v-chip
+        v-for="(timeSlot, index) in availableTimeSlots"
+        :key="index"
+        :text="timeSlot"
+        class="mr-2 mt-2"
+      />
+      <!-- </v-chip-group> -->
     </v-card-item>
     <v-card-actions>
       <v-btn text="Reserve" class="mb-2 ml-2" @click="showStatus(true)" />
