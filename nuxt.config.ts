@@ -35,11 +35,6 @@ export default defineNuxtConfig({
   //   modules: fileURLToPath(new URL('modules', import.meta.url)),
   // },
 
-  features: {
-    // Required when customizing Vuetify sass variables via configFile with SSR enabled - https://vuetify-nuxt-module.netlify.app/guide/server-side-rendering.html#vuetify-sass-variables
-    inlineStyles: false,
-  },
-
   experimental: {
     componentIslands: true,
   },
@@ -63,15 +58,16 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
     'vuetify-nuxt-module',
     '@nuxtjs/seo',
-    '@nuxtjs/fontaine',
+    // '@nuxtjs/fontaine', // blocked by https://github.com/nuxt-modules/fontaine/issues/342
     '@nuxtjs/critters',
     '@nuxt/icon',
     '@nuxt/eslint',
   ],
   // https://dev.to/jacobandrewsky/improving-performance-of-nuxt-with-fontaine-5dim
-  fontMetrics: {
-    fonts: ['Inter', 'Kalam'],
-  },
+  // blocked by https://github.com/nuxt-modules/fontaine/issues/342
+  // fontMetrics: {
+  //   fonts: ['Inter', 'Kalam'],
+  // },
 
   // https://dev.to/jacobandrewsky/optimizing-css-performance-in-nuxt-with-critters-4k8i
   critters: {
@@ -82,21 +78,30 @@ export default defineNuxtConfig({
     },
   },
 
+  icon: {
+    serverBundle: {
+      // Used in OgImage
+      collections: ['vscode-icons', 'logos'],
+    },
+  },
+
   // Vuetify's global styles
   css: [
     '@/assets/css/main.css', // Used for global styles. This file is generally configured as cssPath with Pinegrow Vuetify Plugin
-    '@/assets/vuetify/main.scss', // If customizing Vuetify sass variables
+    '@/assets/vuetify/main.scss', // If customizing Vuetify global sass variables, ensure disableVuetifyStyles: true with Nuxt Vuetity module
     'lite-youtube-embed/src/lite-yt-embed.css',
   ],
 
   // Vuetify Nuxt module, thanks Joaquín (userquin)
   vuetify: {
     moduleOptions: {
+      /* If customizing sass global variables ($utilities, $reset, $color-pack, $body-font-family, etc) */
+      disableVuetifyStyles: true,
       /* If customizing sass variables of vuetify components */
-      /* If enabling this, set experimental.inlineSSRStyles to false */
       styles: {
         configFile: 'assets/vuetify/settings.scss',
       },
+
       includeTransformAssetsUrls: {
         NuxtImg: ['src'],
         OgImage: ['image'],
