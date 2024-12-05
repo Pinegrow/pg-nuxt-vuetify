@@ -300,7 +300,7 @@
     }
   },
   "template_framework_id": "vue",
-  "open-pages": ["app/pages/index.vue"],
+  "open-pages": ["app/pages/index.vue", "app/components/SampleCard.vue"],
   "breakpoints": ["600px", "960px", "1280px", "1920px", "2560px"],
   "frameworks": [
     "@nuxt/icon",
