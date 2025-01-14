@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   extends: [
     './app-nuxt-vuetify-layer', // NavBar and Footer components
   ],
+
   // ssr: false,
   // devtools: { enabled: false }, // enabled by default, disable when using standalone Vue devtools
 
@@ -69,7 +70,7 @@ export default defineNuxtConfig({
     // '@nuxtjs/fontaine', // blocked by https://github.com/nuxt-modules/fontaine/issues/342
     '@nuxtjs/critters',
     // '@nuxt/icon', // Enable once nuxt-icon is removed
-    'nuxt-icon', // To be replaced with @nuxt-icon (above), once NuxtSEO drops using this.
+    'nuxt-icon', // To be replaced with @nuxt-icon (above), once NuxtSEO drops using this/becomes stable..
     '@nuxt/eslint',
   ],
 
@@ -254,10 +255,12 @@ export default defineNuxtConfig({
     trailingSlash,
     titleSeparator,
   },
+
   robots: {
     // https://nuxtseo.com/robots/api/config#blocknonseobots
     blockNonSeoBots: true,
   },
+
   sitemap: {
     // https://nuxtseo.com/sitemap/guides/i18n#debugging-hreflang
     // Open {{site.url}}/sitemap.xml
@@ -277,6 +280,7 @@ export default defineNuxtConfig({
     // Remove strictNuxtContentPaths if using nuxt-content in documentDriven mode
     strictNuxtContentPaths: true,
   },
+
   ogImage: {
     defaults: {
       extension: 'jpeg',
@@ -289,6 +293,7 @@ export default defineNuxtConfig({
     // disable at a global level
     // runtimeCacheStorage: false,
   },
+
   linkChecker: {
     enabled: false,
     excludeLinks: ['https://twitter.com/vuedesigner'],
@@ -324,7 +329,6 @@ export default defineNuxtConfig({
   pinegrow: {
     liveDesigner: {
       iconPreferredCase: 'unocss', // default value (can be removed), vuetify-nuxt-module uses the unocss format for icon names
-      devtoolsKey: 'devtoolsKey', // see plugins/devtools.client.ts
       vuetify: {
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
         configPath: 'vuetify.config.ts', // or file where vuetify is created
@@ -344,4 +348,6 @@ export default defineNuxtConfig({
       // ],
     },
   },
+
+  compatibilityDate: '2025-01-14',
 })
